@@ -19,17 +19,23 @@ public provincias!: Provincia[];
 
   ngOnInit() {
 
-    this._provinciaService.getProvincias().subscribe(
+    this._provinciaService.getProvincias().subscribe(provincias => {
+      this.provincias = provincias.data;
+      console.log(provincias);
+    })
 
-      Response => {
-        if (Response.provincias) {
-          this.provincias = Response.provincias;
-        }
-      },
-      error => {
-        console.log(error);
-      }
-    )
+
+    // this._provinciaService.getProvincias().subscribe(
+
+    //   Response => {
+    //     if (Response.provincias) {
+    //       this.provincias = Response.provincias;
+    //     }
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   }
+    // )
 
   }
 

@@ -1,20 +1,31 @@
-<!-- <div class="jumbotron" *ngIf="!provincias">
-    <h1> Cargando...</h1>
+<div class="jumbotron" *ngIf="!provincias">
+  <h1> Cargando...</h1>
 </div>
-
-<div class="jumbotron" *ngIf="provincias && provincias.length == 0">
-    <h1>Ups...</h1>
-    <p>No hay provincias para mostrar, intentalo mas tarde ;)</p>
-</div>  -->
 
 <div *ngIf="provincias" class="row">
-    <div *ngFor="let provincia of provincias" class="col-lg-4 col-md-6 mb-4">
-        <div>
-            <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="card-title">{{provincia.data}}</h4>
-                </div>
-            </div>
-        </div>
-    </div>
+
+  <table mat-table [dataSource]="provincias" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Codigo">
+      <th mat-header-cell *matHeaderCellDef> Codigo </th>
+      <td mat-cell *matCellDef="let provincia"> {{provincia.codigo}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let provincia"> {{provincia.nombre}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
 </div>
+
+
+  

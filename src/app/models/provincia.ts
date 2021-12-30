@@ -1,10 +1,6 @@
 export class Provincia {
     constructor(
-        public data: [
-            {
-                codigo: 1;
-                nombre: 'Azua';
-            }
-        ]
+        public codigo: number,
+        public nombre: string
     ) { }
 }

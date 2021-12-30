@@ -10,7 +10,7 @@ import { Global } from "../services/global";
 export class ProvinciasComponent implements OnInit {
 
   public url: string;
-
+  displayedColumns: string[] = ['Codigo', 'Nombre'];
   @Input() provincias!: Provincia[];
 
   constructor() {
