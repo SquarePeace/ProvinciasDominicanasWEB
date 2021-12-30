@@ -1,0 +1,20 @@
+<!-- <div class="jumbotron" *ngIf="!provincias">
+    <h1> Cargando...</h1>
+</div>
+
+<div class="jumbotron" *ngIf="provincias && provincias.length == 0">
+    <h1>Ups...</h1>
+    <p>No hay provincias para mostrar, intentalo mas tarde ;)</p>
+</div>  -->
+
+<div *ngIf="provincias" class="row">
+    <div *ngFor="let provincia of provincias" class="col-lg-4 col-md-6 mb-4">
+        <div>
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">{{provincia.data}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
