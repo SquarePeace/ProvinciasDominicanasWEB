@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ProvinciasComponent } from './provincias/provincias.component';
+import { MunicipiosComponent } from './municipios/municipios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProvinciasComponent
+    ProvinciasComponent,
+    MunicipiosComponent
   ],
   imports: [
     BrowserModule,

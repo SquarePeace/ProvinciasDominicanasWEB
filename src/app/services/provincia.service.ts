@@ -22,6 +22,10 @@ export class ProvinciaService {
       return this._http.get(this.url + 'provincia/' + provinciasID);
    }
 
+   getMunicipios(MunicipiosID: any): Observable<any> {
+      return this._http.get(this.url + 'provincias/' + MunicipiosID + '/municipios');
+   }
+
    search(searchString: any): Observable<any> {
       return this._http.get(this.url + 'search/' + searchString);
    }

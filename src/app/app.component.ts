@@ -21,7 +21,7 @@ public provincias!: Provincia[];
 
     this._provinciaService.getProvincias().subscribe(provincias => {
       this.provincias = provincias.data;
-      console.log(provincias);
+      console.log('Provincias: ' + provincias);
     })
 
 

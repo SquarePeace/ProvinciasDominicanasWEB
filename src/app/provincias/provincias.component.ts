@@ -10,12 +10,12 @@ import { Global } from "../services/global";
 export class ProvinciasComponent implements OnInit {
 
   public url: string;
-  displayedColumns: string[] = ['Codigo', 'Nombre'];
+  displayedColumns: string[] = ['Nombre', 'Municipios'];
   @Input() provincias!: Provincia[];
 
   constructor() {
     this.url = Global.url;
-   }  
+  }  
 
   ngOnInit(): void {
   }
