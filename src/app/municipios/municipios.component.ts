@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProvinciaService } from "../services/provincia.service";
 import { Provincia } from "../models/provincia";
-import { Router, ActivatedRoute, Params } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { Global } from "../services/global";
 
 @Component({
