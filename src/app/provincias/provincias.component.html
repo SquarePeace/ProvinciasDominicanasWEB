@@ -25,6 +25,12 @@
         Municipios</a> </td>
     </ng-container>
 
+    <ng-container matColumnDef="Distritos Municipales">
+      <th mat-header-cell *matHeaderCellDef> Distritos Municipales </th>
+      <td mat-cell *matCellDef="let provincia"> <a [routerLink]="['/provincias/distritos_municipales', provincia.codigo]">Ver
+        Distritos Municipales</a> </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>

@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProvinciasComponent } from './provincias/provincias.component';
 import { MunicipiosComponent } from './municipios/municipios.component';
 import { HomeComponent } from './home/home.component';
+import { DistritosComponent } from './distritos/distritos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProvinciasComponent,
     MunicipiosComponent,
-    HomeComponent
+    HomeComponent,
+    DistritosComponent
   ],
   imports: [
     BrowserModule,
