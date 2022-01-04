@@ -13,7 +13,7 @@ export class DistritosComponent implements OnInit {
 
   public distrito!: Provincia[];
   public url!: string;
-  displayedColumns: string[] = ['Codigo', 'Nombre'];
+  displayedColumns: string[] = ['Distritos'];
 
   constructor(
     private _provinciaService: ProvinciaService,

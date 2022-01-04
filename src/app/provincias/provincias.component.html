@@ -1,19 +1,11 @@
-<div class="jumbotron" *ngIf="!provincias">
-  <h1> Cargando...</h1>
+<div *ngIf="!provincias">
+  <h1>Cargando...</h1>
 </div>
 
 <div *ngIf="provincias" class="row">
 
-  <h2>Provincias de Republica Dominicana</h2>
-
   <table mat-table [dataSource]="provincias" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
-  
-    <!-- Name Column -->
     <ng-container matColumnDef="Nombre">
       <th mat-header-cell *matHeaderCellDef> Nombre </th>
       <td mat-cell *matCellDef="let provincia"> {{provincia.nombre}} </td>
@@ -21,20 +13,25 @@
   
     <ng-container matColumnDef="Municipios">
       <th mat-header-cell *matHeaderCellDef> Municipios </th>
-      <td mat-cell *matCellDef="let provincia"> <a [routerLink]="['/provincias/municipios', provincia.codigo]">Ver
-        Municipios</a> </td>
+      <td mat-cell *matCellDef="let provincia">
+        <button mat-raised-button color="primary" [routerLink]="['/provincias/municipios', provincia.codigo]">Ver
+          Municipios</button>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="Distritos Municipales">
       <th mat-header-cell *matHeaderCellDef> Distritos Municipales </th>
-      <td mat-cell *matCellDef="let provincia"> <a [routerLink]="['/provincias/distritos_municipales', provincia.codigo]">Ver
-        Distritos Municipales</a> </td>
+      <td mat-cell *matCellDef="let provincia"> 
+        
+        <button mat-raised-button color="primary" [routerLink]="['/provincias/distritos_municipales', provincia.codigo]">Ver
+          Distritos Municipales</button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
+  
 </div>
 
 

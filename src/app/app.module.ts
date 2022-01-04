@@ -9,6 +9,9 @@ import { ProvinciasComponent } from './provincias/provincias.component';
 import { MunicipiosComponent } from './municipios/municipios.component';
 import { HomeComponent } from './home/home.component';
 import { DistritosComponent } from './distritos/distritos.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,17 @@ import { DistritosComponent } from './distritos/distritos.component';
     ProvinciasComponent,
     MunicipiosComponent,
     HomeComponent,
-    DistritosComponent
+    DistritosComponent,
+    NavbarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
