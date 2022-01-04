@@ -22,7 +22,7 @@ correr `npm install`, `ng serve` en la ruta del proyecto y luego dirigirse a `ht
 
 ### Docker
 
-Dentro de la ruta principal de proyecto abrimos la terminal, ejecutamos `docker build . --no-cache -t provinciasdominicanas` para poder generar la imagen, solo tenemos que ejecutar el contenedor con `docker run -d -p 80:80 provinciasdominicanas:latest` y listo!.
+Dentro de la ruta principal de proyecto abrimos la terminal, ejecutamos `docker build . --no-cache -t provinciasdominicanas` para poder generar la imagen, solo tenemos que ejecutar el contenedor con `docker run -d -p 80:80 provinciasdominicanas:latest` e ir al navegador y pegar `http://localhost:80/`
 
 <br>
 
