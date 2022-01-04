@@ -1,9 +1,17 @@
 # Provincias Dominicanas
 
-Es una pagina web que consume su data de: http://provinciasrd.raydelto.org/provincias
+## caracteristicas de la web:
 
-para mas informacion acerca de esta api, visitar:
-https://github.com/raydelto/provincias_dominicanas_api
+Podemos ver las:
+
+-Provincias.
+<br/>
+-Municipios.
+<br/>
+-Distritos municipales.
+
+de la republica dominicana.
+
 ## Como Correr el proyecto
 
 ### Tenemos dos formas:
@@ -14,4 +22,11 @@ correr `npm install`, `ng serve` en la ruta del proyecto y luego dirigirse a `ht
 
 ### Docker
 
-`build` y `run` a la imagen de docker
+Dentro de la ruta principal de proyecto abrimos la terminal, ejecutamos `docker build . --no-cache -t provinciasdominicanas` para poder generar la imagen, solo tenemos que ejecutar el contenedor con `docker run -d -p 80:80 provinciasdominicanas:latest` y listo!.
+
+<br>
+
+Es una pagina web que consume su data de: http://provinciasrd.raydelto.org/provincias
+
+para mas informacion acerca de esta api, visitar:
+https://github.com/raydelto/provincias_dominicanas_api
