@@ -12,7 +12,6 @@ import { DistritosComponent } from './distritos/distritos.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErrorComponent } from './error/error.component';
-import {MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,7 @@ import {MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     DistritosComponent,
     NavbarComponent,
-    ErrorComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +29,7 @@ import {MatPaginatorModule } from '@angular/material/paginator';
     BrowserAnimationsModule,
     MatTableModule,
     HttpClientModule,
-    MatToolbarModule,
-    MatPaginatorModule
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
