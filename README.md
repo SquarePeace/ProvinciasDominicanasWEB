@@ -26,7 +26,6 @@ Dentro de la ruta principal del proyecto abrimos la terminal, ejecutamos `docker
 
 <br>
 
-Es una pagina web que consume su data de: http://provinciasrd.raydelto.org/provincias
+Es una pagina web que consume su data de: https://github.com/SquarePeace/WebRestProvincias
 
-para mas informacion acerca de esta api, visitar:
-https://github.com/raydelto/provincias_dominicanas_api
+para mas informacion acerca de esta api por favor leer el readme del mismo repositorio...
