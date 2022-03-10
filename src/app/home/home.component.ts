@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this._provinciaService.getProvincias().subscribe(provincias => {
-      this.provincias = provincias.data;
+      this.provincias = provincias;
       console.log('Provincias: ' + provincias);
     })
   }

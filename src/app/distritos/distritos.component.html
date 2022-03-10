@@ -2,7 +2,14 @@
     <h1> Cargando...</h1>
   </div>
   
-  <div *ngIf="distrito" class="row">
+  <div *ngIf="distrito && distrito.length === 0" class="row">
+
+    <h1>No hay distritos Municipales...</h1>
+    <button mat-raised-button color="primary" [routerLink]="['/home']">Regresar</button>
+    
+  </div>
+
+  <div *ngIf="distrito && distrito.length !== 0" class="row">
 
     <button mat-raised-button color="primary" [routerLink]="['/home']">Regresar</button>
     

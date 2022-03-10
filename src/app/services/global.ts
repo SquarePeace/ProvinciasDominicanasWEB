@@ -1,4 +1,4 @@
 export var Global = {
 
-    url: 'http://provinciasrd.raydelto.org/'
+    url: 'http://localhost:8090/api/'
 };

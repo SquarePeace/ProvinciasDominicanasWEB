@@ -28,8 +28,8 @@ export class DistritosComponent implements OnInit {
     this._route.params.subscribe(params =>{
       let id = params['id'];
 
-      this._provinciaService.getDistritos(id).subscribe(distrito => {
-        this.distrito = distrito.data;
+      this._provinciaService.findDistritoByProvincia(id).subscribe(distrito => {
+        this.distrito = distrito;
         console.log('Distritos: ' + distrito);
       })
     })

@@ -29,8 +29,8 @@ export class MunicipiosComponent implements OnInit {
     this._route.params.subscribe(params =>{
       let id = params['id'];
 
-      this._provinciaService.getMunicipios(id).subscribe(municipio => {
-        this.municipio = municipio.data;
+      this._provinciaService.findMunicipioByProvincia(id).subscribe(municipio => {
+        this.municipio = municipio;
         console.log('Municipios: ' + municipio);
       })
     })

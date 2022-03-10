@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Provincia } from '../models/provincia';
 import { Global } from '../services/global';
 
 @Injectable()
@@ -18,16 +17,16 @@ export class ProvinciaService {
       return this._http.get(this.url + provincias);
    }
 
-   getProvincia(provinciasID: any): Observable<any> {
-      return this._http.get(this.url + 'provincia/' + provinciasID);
+   getProvincia(ID: any): Observable<any> {
+      return this._http.get(this.url + 'provincia/' + ID);
    }
 
-   getMunicipios(MunicipiosID: any): Observable<any> {
-      return this._http.get(this.url + 'provincias/' + MunicipiosID + '/municipios');
+   findMunicipioByProvincia(ID: any): Observable<any> {
+      return this._http.get(this.url + 'provincias/' + ID + '/municipios');
    }
 
-   getDistritos(DistritosID: any): Observable<any> {
-      return this._http.get(this.url + 'provincias/' + DistritosID + '/distritos_municipales');
+   findDistritoByProvincia(ID: any): Observable<any> {
+      return this._http.get(this.url + 'provincias/' + ID + '/distritos_municipales');
    }
 
    search(searchString: any): Observable<any> {
